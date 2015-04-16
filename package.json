@@ -21,9 +21,7 @@
   },
   "homepage": "https://github.com/fis-scaffold/default",
   "dependencies": {
-    "fis-packager-depscombine": "0.0.8",
-    "fis-postpackager-autoload": "0.0.19",
-    "fis-postprocessor-require-async": "0.0.9",
-    "fis3": "^1.0.0-beta3"
+    "fis-postpackager-autoload": "0.0.20",
+    "fis3": "^1.0.0-beta6"
   }
 }
