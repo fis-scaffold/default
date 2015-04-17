@@ -2,7 +2,7 @@
 
 ## Install fis3
 
-`npm install fis3`
+`npm install fis3 -g`
 
 ## useage
 
