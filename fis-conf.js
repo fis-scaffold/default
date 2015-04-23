@@ -33,6 +33,7 @@ fis.match('/components/**/*.css', {
   packTo: '/pkg/components.css'
 });
 
+// 添加 scss 插件
 fis.match('*.scss', {
   parser: fis.plugin('sass', {
     include_paths: ['./static/scss']
