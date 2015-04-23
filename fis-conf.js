@@ -3,7 +3,7 @@ fis.set('project.files', '*.html');
 
 // default settings
 fis
-  .env('dev')
+  .media('dev')
   .match('**', {
     useHash: false,
     useDomain: false
@@ -11,7 +11,7 @@ fis
 
 // fis release --media production
 fis
-  .env('production')
+  .media('production')
   .match('*.js', {
     optimizer: fis.plugin('uglify-js')
   })
@@ -25,10 +25,10 @@ fis
 // 开启 autuload, 好处是，依赖自动加载。
 fis.set('modules.postpackager', fis.plugin('autoload'));
 
-fis.match('components/**/*.js', {
-  packTo: 'pkg/components.js'
+fis.match('/components/**/*.js', {
+  packTo: '/pkg/components.js'
 });
 
-fis.match('components/**/*.css', {
-  packTo: 'pkg/components.css'
+fis.match('/components/**/*.css', {
+  packTo: '/pkg/components.css'
 });
