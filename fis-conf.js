@@ -32,3 +32,9 @@ fis.match('/components/**/*.js', {
 fis.match('/components/**/*.css', {
   packTo: '/pkg/components.css'
 });
+
+fis.match('*.scss', {
+  parser: fis.plugin('sass', {
+    include_paths: ['./static/scss']
+  })
+});

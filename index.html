@@ -12,6 +12,15 @@
         @require "jquery-ui/themes/base/theme.css"
     -->
     <link rel="stylesheet" type="text/css" href="./static/css/style.css">
+    <style type="text/x-scss">
+    @import 'mixin';
+
+    #tabs {
+      ul {
+        @include box-sizing('content-box');
+      }
+    }
+    </style>
     <!--STYLE_PLACEHOLDER-->
 </head>
 <body>
