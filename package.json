@@ -22,6 +22,6 @@
   "homepage": "https://github.com/fis-scaffold/default",
   "dependencies": {
     "fis-postpackager-autoload": "0.0.20",
-    "fis3": "^1.0.0-beta6"
+    "fis3": "^1.0.0"
   }
 }
