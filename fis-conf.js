@@ -17,7 +17,7 @@ fis
     optimizer: fis.plugin('uglify-js')
   })
 
-  .match('*.css', {
+  .match('*.{css,scss}', {
     optimizer: fis.plugin('clean-css')
   })
 
