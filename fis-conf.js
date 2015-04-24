@@ -12,26 +12,29 @@ fis
 // fis release --media production
 fis
   .media('production')
+
   .match('*.js', {
     optimizer: fis.plugin('uglify-js')
   })
+
   .match('*.css', {
     optimizer: fis.plugin('clean-css')
   })
+
   .match('*.png', {
     optimizer: fis.plugin('png-compressor')
+  })
+
+  .match('/components/**/*.js', {
+    packTo: '/pkg/components.js'
+  })
+
+  .match('/components/**/*.css', {
+    packTo: '/pkg/components.css'
   });
 
 // 开启 autuload, 好处是，依赖自动加载。
 fis.set('modules.postpackager', fis.plugin('autoload'));
-
-fis.match('/components/**/*.js', {
-  packTo: '/pkg/components.js'
-});
-
-fis.match('/components/**/*.css', {
-  packTo: '/pkg/components.css'
-});
 
 // 添加 scss 插件
 fis.match('*.scss', {
