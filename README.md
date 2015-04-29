@@ -15,12 +15,12 @@ fis3 init
 ## 运行 & 预览
 
 ```bash
-fis release
-fis server start
+fis3 release
+fis3 server start
 ```
 
 ## 产出产品代码
 
 ```
-fis release -d ./output --env production
+fis3 release -d ./output --media production
 ```
