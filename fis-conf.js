@@ -1,24 +1,31 @@
 // 以 html 文件作为入口，所有 html 文件以及与之关联的静态文件也会被自动编译，用了啥编译啥，所谓按需编译。
 fis.set('project.files', '*.html');
 
-// default settings
+// default settings. fis3 release
 fis
   .media('dev')
-  .match('**', {
-    useHash: false,
-    useDomain: false
+
+  .match('*.{css,scss,js}', {
+    useMap: true
   });
 
-// fis release --media production
+
+// fis3 release --media production
 fis
   .media('production')
 
   .match('*.js', {
-    optimizer: fis.plugin('uglify-js')
+    optimizer: fis.plugin('uglify-js'),
+    useHash: true,
+    useDomain: true,
+    useMap: true
   })
 
   .match('*.{css,scss}', {
-    optimizer: fis.plugin('clean-css')
+    optimizer: fis.plugin('clean-css'),
+    useHash: true,
+    useDomain: true,
+    useMap: true
   })
 
   .match('*.png', {
