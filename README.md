@@ -22,5 +22,5 @@ fis3 server start
 ## 产出产品代码
 
 ```
-fis3 release -d ./output --media production
+fis3 release production -d ./output
 ```

@@ -5,27 +5,21 @@ fis.set('project.files', '*.html');
 fis
   .media('dev')
 
-  .match('*.{css,scss,js}', {
-    useMap: true
+  .match('**', {
+    useHash: false
   });
 
 
-// fis3 release --media production
+// fis3 release production
 fis
   .media('production')
 
   .match('*.js', {
-    optimizer: fis.plugin('uglify-js'),
-    useHash: true,
-    useDomain: true,
-    useMap: true
+    optimizer: fis.plugin('uglify-js')
   })
 
   .match('*.{css,scss}', {
-    optimizer: fis.plugin('clean-css'),
-    useHash: true,
-    useDomain: true,
-    useMap: true
+    optimizer: fis.plugin('clean-css')
   })
 
   .match('*.png', {
