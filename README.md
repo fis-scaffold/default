@@ -1,5 +1,7 @@
 # FIS3 脚手架默认模板
 
+![build with fis3](https://img.shields.io/badge/built%20with-fis3-green.svg)
+
 ## 安装 fis3
 
 `npm install fis3 -g`
