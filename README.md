@@ -4,6 +4,7 @@
 
 ## 安装 fis3
 
+
 `npm install fis3 -g`
 
 ## 初始化
