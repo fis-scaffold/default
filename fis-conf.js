@@ -1,24 +1,34 @@
 // default settings. fis3 release
-fis
-  .media('dev')
 
-  .match('**', {
-    useHash: false
+// Global start
+fis.match('*.{js,css}', {
+  useHash: true
+});
+
+fis.match('::image', {
+  useHash: true
+});
+
+fis.match('*.js', {
+  optimizer: fis.plugin('uglify-js')
+});
+
+fis.match('*.css', {
+  optimizer: fis.plugin('clean-css')
+});
+
+fis.match('*.png', {
+  optimizer: fis.plugin('png-compressor')
+});
+
+// Global end
+
+// default media is `dev`
+fis.media('dev')
+  .match('*', {
+    useHash: false,
+    optimizer: null
   });
 
-
-// fis3 release production
-fis
-  .media('production')
-
-  .match('*.js', {
-    optimizer: fis.plugin('uglify-js')
-  })
-
-  .match('*.{css,scss}', {
-    optimizer: fis.plugin('clean-css')
-  })
-
-  .match('*.png', {
-    optimizer: fis.plugin('png-compressor')
-  });
+// extends GLOBAL config
+fis.media('production');
